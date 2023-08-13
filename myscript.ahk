@@ -18,3 +18,6 @@ Shift:: {
     if (GetKeyState("Shift") = 0) ; 如果 Shift 在0.3秒内被释放
         Send("^f") ; 发送 Ctrl+F 组合键
 }
+
+CapsLock::Return
+RAlt::Shift
