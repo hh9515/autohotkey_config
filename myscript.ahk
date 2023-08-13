@@ -14,9 +14,10 @@ Ctrl:: {
 }
 
 Shift:: {
-    KeyWait("LShift", 0.3) ; 等待0.3秒，如果在这个时间内 Shift 被释放，则继续执行下面的代码
-    if (GetKeyState("LShift") = 0) { ; 如果 Shift 在0.3秒内被释放
-        Send("LShift") ; 发送一个左 Shift 键
+    KeyWait("Shift", 0.3) ; 等待0.3秒，如果在这个时间内 Shift 被释放，则继续执行下面的代码
+    if (GetKeyState("Shift") = 0) { ; 如果 Shift 在0.3秒内被释放
+        Send "{Shift down}"
+        Send "{Shift up}" ; 模拟按下并释放" Shift 键
         Send("^f") ; 发送 Ctrl+F 组合键
     }
 }
