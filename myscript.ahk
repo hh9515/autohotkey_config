@@ -35,8 +35,6 @@ RAlt:: {
     StartTime := A_TickCount
     While GetKeyState("RAlt", "P") {
         If (A_TickCount - StartTime) > 500 {
-            Send "{Esc}" ; 先发送Esc键
-            Sleep 30 ; 稍微等待，确保按键被处理
             Send "^a"
             return
         }
